@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import PinchZoomPan from "react-image-zoom-pan";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+     }}>
+      <PinchZoomPan
+        minScale={.8}
+        initialScale={.8}
+        maxScale={2}
+        position="center"
+      >
+        <img alt='Eldora' src='/paper_eldora_creased.png' />
+      </PinchZoomPan>
     </div>
   );
 }
